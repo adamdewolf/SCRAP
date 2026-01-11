@@ -1,0 +1,14 @@
+[Unit]
+Description=SCRAP Daemon - Storage Cluster of Repurposed Aging Parts
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/scrapd --config /etc/scrap.yaml
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+User=root
+
+[Install]
+WantedBy=multi-user.target

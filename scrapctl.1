@@ -1,0 +1,36 @@
+SCRAPCTL(1)                     SCRAP Tools                    SCRAPCTL(1)
+
+NAME
+       scrapctl - manage and observe the Storage Cluster of Repurposed Aging Parts
+
+SYNOPSIS
+       scrapctl [COMMAND] [OPTIONS]
+
+DESCRIPTION
+       SCRAP is a self-aware storage system designed for drives that
+       should have been recycled years ago. It performs dynamic
+       redundancy and emotional support for your failing disks.
+
+COMMANDS
+       status      Display current array condition.
+       rebuild     Attempt to reconstruct data using remaining optimism.
+       trust       Show per-drive Trust Score™.
+       exorcise    Remove zombie disks that re-mounted themselves.
+       therapy     Engage drive in supportive conversation.
+
+EXAMPLES
+       scrapctl status
+       scrapctl rebuild --force
+       scrapctl trust /dev/sdc
+       scrapctl exorcise /dev/sdd
+
+FILES
+       /etc/scrap.yaml   Primary configuration
+       /var/log/scrap/   Event logs and poetry
+
+SEE ALSO
+       scrapd(8), fsck(8), prayer(1)
+
+COPYRIGHT
+       Copyright © 2025 The SCRAP Collective
+       Licensed under the Don't Blame Us Public License (DBUPL).
